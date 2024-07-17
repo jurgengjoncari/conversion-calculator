@@ -1,0 +1,14 @@
+<app-converter
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  [unit]="'Length'"
+  [units]="lengths"
+  [fromUnit]="fromUnit"
+  [toUnit]="toUnit"
+  [fromAmount]="fromAmount"
+  [toAmount]="toAmount"
+  (fromAmountChange)="handleFromAmountChange($event)"
+  (fromUnitChange)="handleFromUnitChange($event)"
+  (toAmountChange)="handleToAmountChange($event)"
+  (toUnitChange)="handleToUnitChange($event)"
+></app-converter>

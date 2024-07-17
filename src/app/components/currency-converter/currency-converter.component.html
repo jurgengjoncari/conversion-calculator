@@ -1,0 +1,14 @@
+<app-converter
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  [unit]="'Currency'"
+  [units]="exchangeRates"
+  [fromUnit]="fromCurrency"
+  [toUnit]="toCurrency"
+  [fromAmount]="fromAmount"
+  [toAmount]="toAmount"
+  (fromAmountChange)="handleFromAmountChange($event)"
+  (fromUnitChange)="handleFromCurrencyChange($event)"
+  (toAmountChange)="handleToAmountChange($event)"
+  (toUnitChange)="handleToCurrencyChange($event)"
+></app-converter>

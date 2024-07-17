@@ -1,0 +1,65 @@
+<mat-card appearance="outlined" fxLayout="column" fxFlex="80ch" fxFlex.xs="100%">
+  <mat-card-header>
+    <mat-card-title>
+      {{unit}} Converter
+<!--      {{fromAmount}} {{fromUnit}} equals {{toAmount}} {{toUnit}}-->
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form fxLayout="column" fxLayoutGap="var(--medium)">
+      <div fxLayout="column" fxFlexFill fxLayoutGap="var(--small)">
+        <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap="var(--xsmall)">
+          <mat-form-field appearance="outline" fxFlex>
+            <mat-label>Amount</mat-label>
+            <input
+              matInput
+              type="number"
+              placeholder="Amount"
+              name="fromAmount"
+              [ngModel]="fromAmount | number:'1.0-3'"
+              (ngModelChange)="onFromAmountChange($event)"
+            >
+            <mat-hint>Enter the amount</mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="outline" fxFlex>
+            <mat-label>Unit</mat-label>
+            <mat-select [(value)]="fromUnit" (selectionChange)="onFromUnitChange($event.value)">
+              <mat-option *ngFor="let unit of units | keyvalue"
+                          [value]="unit.key">
+                {{ unit.key }}
+              </mat-option>
+            </mat-select>
+            <mat-hint>Select the unit</mat-hint>
+          </mat-form-field>
+        </div>
+        <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap="var(--xsmall)">
+          <mat-form-field appearance="outline" fxFlex>
+            <mat-label>Amount</mat-label>
+            <input
+              matInput
+              type="number"
+              placeholder="Amount"
+              name="toAmount"
+              [ngModel]="toAmount | number:'1.0-3'"
+              (ngModelChange)="onToAmountChange($event)"
+            >
+            <mat-hint>Enter the amount</mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="outline" fxFlex>
+            <mat-label>Unit</mat-label>
+            <mat-select [(value)]="toUnit" (selectionChange)="onToUnitChange($event.value)">
+              <mat-option *ngFor="let unit of units | keyvalue" [value]="unit.key">{{ unit.key }}</mat-option>
+            </mat-select>
+            <mat-hint>Select the unit</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+      <fieldset>
+        <legend>Result</legend>
+        <output>
+          {{fromAmount | number:'1.0-3'}} {{fromUnit}} equals {{toAmount | number:'1.0-3'}} {{toUnit}}
+        </output>
+      </fieldset>
+    </form>
+  </mat-card-content>
+</mat-card>

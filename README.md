@@ -1,27 +1,42 @@
-# ConversionCalculator
+# Conversion Calculator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+This project is an Angular-based, mobile-first Progressive Web Application (PWA) that provides a conversion calculator for currency and length units. The application is designed to be modular, maintainable, and scalable, utilizing Angular Material for styling and Angular Flex-Layout for responsive layouts.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Features](#features)
+- [Technology Used](#technology-used)
+- [Usage](#usage)
+- [API Integration](#api-integration)
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Currency conversion supporting multiple currency pairs
+- Length conversion supporting meters, yards, and inches
+- Two-way conversion for both currency and length
+- Responsive design using Angular Flex-Layout
+- Styled with Angular Material
 
-## Build
+## Technology Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js v22.4.1
+- npm 6.14.6
+- Angular CLI 18.1.0
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Choose which unit you want to convert by selecting the tab.
+- Enter the amount you want to convert.
+- Select the source and target currencies for currency conversion.
+- Select the source and target units for length conversion.
+- View the conversion result instantly.
 
-## Running end-to-end tests
+## API Integration
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The application uses the `exchange-rates.abstractapi.com` API for fetching currency exchange rates. You can switch to another API if needed by updating the `environment.ts`.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Example:
+```typescript
+API_URL: 'https://exchange-rates.abstractapi.com/v1/live/';
+```
+To use a different API, replace the `API_URL` with the new endpoint and adjust the data handling accordingly.
