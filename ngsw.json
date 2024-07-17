@@ -1,0 +1,73 @@
+{
+  "configVersion": 1,
+  "timestamp": 1721237824860,
+  "index": "/conversion-calculator/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/conversion-calculator/chunk-JMU337OM.js",
+        "/conversion-calculator/chunk-QVSKWXGB.js",
+        "/conversion-calculator/index.html",
+        "/conversion-calculator/main-CEMQX44P.js",
+        "/conversion-calculator/polyfills-6EAL64PA.js",
+        "/conversion-calculator/styles-FDBSTVMM.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/conversion-calculator/icons/android-chrome-192x192.png",
+        "/conversion-calculator/icons/android-chrome-512x512.png",
+        "/conversion-calculator/icons/apple-touch-icon.png",
+        "/conversion-calculator/icons/favicon-16x16.png",
+        "/conversion-calculator/icons/favicon-32x32.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/conversion-calculator/chunk-JMU337OM.js": "6c85eebaf03d1aad2ff9fe86692e18c033f804c7",
+    "/conversion-calculator/chunk-QVSKWXGB.js": "4570ef881fc29d0e4747f9f7a726c51952019cfe",
+    "/conversion-calculator/icons/android-chrome-192x192.png": "6d58603ac0cb463886b2cd5c668c64a0cb10e5a7",
+    "/conversion-calculator/icons/android-chrome-512x512.png": "9b42920d35f7dc2c3bdc445a29673270bed6c8b0",
+    "/conversion-calculator/icons/apple-touch-icon.png": "0b8e53631c56256a45bbff2e01f4883e5441f72f",
+    "/conversion-calculator/icons/favicon-16x16.png": "8855dc01d13a17191b1c5697693a47ee8af541b5",
+    "/conversion-calculator/icons/favicon-32x32.png": "07720cd01822161c96b4466fce923fd6d23a8213",
+    "/conversion-calculator/index.html": "5d51ee9a8653198ac288feef073f0fb392caceb3",
+    "/conversion-calculator/main-CEMQX44P.js": "592800f1d288cbe275d12872710763b4cd9521f4",
+    "/conversion-calculator/polyfills-6EAL64PA.js": "d874147a12a6570d9b44e99935e9de8b7f3cabbc",
+    "/conversion-calculator/styles-FDBSTVMM.css": "211843d7182b6872d18b20d5276316b92fe0bab5"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
