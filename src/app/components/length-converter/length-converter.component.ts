@@ -2,13 +2,19 @@ import {Component, OnInit} from '@angular/core';
 import {ConverterComponent} from "../converter/converter.component";
 import {lengths} from "../../../assets/catalog.json"
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatCard, MatCardContent, MatCardHeader, MatCardTitle, MatCardTitleGroup} from "@angular/material/card";
 
 @Component({
   selector: 'app-length-converter',
   standalone: true,
   imports: [
     ConverterComponent,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCard,
+    MatCardHeader,
+    MatCardTitle,
+    MatCardTitleGroup,
+    MatCardContent
   ],
   templateUrl: './length-converter.component.html',
   styleUrl: './length-converter.component.scss'

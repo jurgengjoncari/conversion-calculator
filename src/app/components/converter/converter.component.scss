@@ -1,13 +1,3 @@
-mat-card {
-  margin-block: var(--medium);
-  mat-card-content, mat-card-header {
-    padding: var(--large);
-  }
-  mat-card-header {
-    padding-bottom: var(--none);
-  }
-}
-
 input[type="number"] {
   -moz-appearance: textfield;
 

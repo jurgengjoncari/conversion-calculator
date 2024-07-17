@@ -7,7 +7,16 @@ import {MatInput} from "@angular/material/input";
 import {MatOptionModule} from "@angular/material/core";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatDivider} from "@angular/material/divider";
-import {MatCard, MatCardContent, MatCardFooter, MatCardHeader, MatCardTitle} from "@angular/material/card";
+import {
+  MatCard,
+  MatCardContent,
+  MatCardFooter,
+  MatCardHeader, MatCardSubtitle,
+  MatCardTitle,
+  MatCardTitleGroup
+} from "@angular/material/card";
+import {MatAnchor} from "@angular/material/button";
+import {MatIcon} from "@angular/material/icon";
 
 @Component({
   selector: 'app-converter',
@@ -29,7 +38,11 @@ import {MatCard, MatCardContent, MatCardFooter, MatCardHeader, MatCardTitle} fro
     MatCardContent,
     MatCardFooter,
     MatCardHeader,
-    MatCardTitle
+    MatCardTitle,
+    MatAnchor,
+    MatIcon,
+    MatCardTitleGroup,
+    MatCardSubtitle
   ],
   templateUrl: './converter.component.html',
   styleUrl: './converter.component.scss'
@@ -42,6 +55,7 @@ export class ConverterComponent {
   @Input() toAmount: number = 1;
   @Input() result: number = 1;
   @Input() unit!: string;
+  @Input() subtitle: string | undefined;
 
   @Output() fromUnitChange = new EventEmitter<string>();
   @Output() toUnitChange = new EventEmitter<string>();

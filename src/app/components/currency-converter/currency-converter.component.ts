@@ -3,6 +3,16 @@ import {Component, OnInit} from '@angular/core';
 import { CurrencyConversionService } from '../../services/currency-conversion.service';
 import {ConverterComponent} from "../converter/converter.component";
 import {FlexModule} from "@angular/flex-layout";
+import {
+  MatCard,
+  MatCardContent,
+  MatCardFooter,
+  MatCardHeader,
+  MatCardTitle,
+  MatCardTitleGroup
+} from "@angular/material/card";
+import {MatAnchor} from "@angular/material/button";
+import {MatIcon} from "@angular/material/icon";
 
 @Component({
   selector: 'app-currency-converter',
@@ -10,7 +20,15 @@ import {FlexModule} from "@angular/flex-layout";
   standalone: true,
   imports: [
     ConverterComponent,
-    FlexModule
+    FlexModule,
+    MatCard,
+    MatCardHeader,
+    MatCardTitle,
+    MatCardTitleGroup,
+    MatAnchor,
+    MatCardFooter,
+    MatIcon,
+    MatCardContent
   ],
   styleUrls: ['./currency-converter.component.scss']
 })
@@ -20,6 +38,7 @@ export class CurrencyConverterComponent implements OnInit {
   fromAmount = 1;
   toAmount = 0;
   exchangeRates: {[key: string]: number} = {'USD': 1};
+  lastUpdated!: string;
 
   constructor(private currencyService: CurrencyConversionService) { }
 
@@ -31,6 +50,7 @@ export class CurrencyConverterComponent implements OnInit {
     this.currencyService.getExchangeRates(currency).subscribe(data => {
       this.exchangeRates = data.rates;
       this.exchangeRates[currency] = 1;
+      this.lastUpdated = data.time_last_update_utc
       this.calculateToAmount();
     });
   }

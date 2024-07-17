@@ -1,17 +1,29 @@
-<header>
-  <mat-toolbar>
-    <span>Conversion Calculator</span>
-  </mat-toolbar>
-  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
-    <a mat-tab-link routerLink="/currency-converter" routerLinkActive #rlaCurrency="routerLinkActive"
-       [active]="rlaCurrency.isActive">
-      <mat-icon>attach_money</mat-icon>Currency</a>
-    <a mat-tab-link routerLink="/length-converter" routerLinkActive #rlaLength="routerLinkActive"
-       [active]="rlaLength.isActive">
-      <mat-icon>straighten</mat-icon>Length</a>
-  </nav>
-  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
-</header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<div fxLayout="column" fxFlexFill>
+  <header>
+    <mat-toolbar>
+      <span>Conversion Calculator</span>
+    </mat-toolbar>
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+      <a mat-tab-link routerLink="/currency-converter" routerLinkActive #rlaCurrency="routerLinkActive"
+         [active]="rlaCurrency.isActive">
+        <mat-icon>attach_money</mat-icon>Currency</a>
+      <a mat-tab-link routerLink="/length-converter" routerLinkActive #rlaLength="routerLinkActive"
+         [active]="rlaLength.isActive">
+        <mat-icon>straighten</mat-icon>Length</a>
+    </nav>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+  </header>
+  <main fxFlex>
+    <router-outlet></router-outlet>
+  </main>
+  <footer fxLayout="row" fxLayoutAlign="center center" class="margin-small">
+    <div>
+      <span>
+        Mady by
+        <a mat-button target="_blank" href="https://linkedin.com/in/jurgengjoncari">
+          <mat-icon>open_in_new</mat-icon>jurgengjoncari
+        </a>
+      </span>
+    </div>
+  </footer>
+</div>

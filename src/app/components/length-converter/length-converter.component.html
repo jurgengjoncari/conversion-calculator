@@ -1,14 +1,24 @@
-<app-converter
-  fxLayout="row"
-  fxLayoutAlign="center center"
-  [unit]="'Length'"
-  [units]="lengths"
-  [fromUnit]="fromUnit"
-  [toUnit]="toUnit"
-  [fromAmount]="fromAmount"
-  [toAmount]="toAmount"
-  (fromAmountChange)="handleFromAmountChange($event)"
-  (fromUnitChange)="handleFromUnitChange($event)"
-  (toAmountChange)="handleToAmountChange($event)"
-  (toUnitChange)="handleToUnitChange($event)"
-></app-converter>
+<div fxLayout="row" fxLayoutAlign="center">
+  <mat-card appearance="outlined" fxLayout="column" fxFlex="80ch" fxFlex.xs="100%">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>
+          Length Converter
+        </mat-card-title>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <app-converter
+        [units]="lengths"
+        [fromUnit]="fromUnit"
+        [toUnit]="toUnit"
+        [fromAmount]="fromAmount"
+        [toAmount]="toAmount"
+        (fromAmountChange)="handleFromAmountChange($event)"
+        (fromUnitChange)="handleFromUnitChange($event)"
+        (toAmountChange)="handleToAmountChange($event)"
+        (toUnitChange)="handleToUnitChange($event)"
+      ></app-converter>
+    </mat-card-content>
+  </mat-card>
+</div>

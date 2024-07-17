@@ -11,3 +11,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --large: 2.5rem;
   --xlarge: 4rem;
 }
+
+.margin-small {
+  margin: var(--small);
+}
+
+mat-card {
+  margin-block: var(--medium);
+  padding: var(--large);
+  mat-card-content, mat-card-header, mat-card-footer {
+    padding: var(--none);
+  }
+  mat-card-header {
+    margin-block-end: var(--medium);
+  }
+  mat-card-footer {
+    margin-block-start: var(--xsmall);
+  }
+}
+
+.text-right {
+  text-align: right;
+}

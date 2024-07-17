@@ -1,14 +1,29 @@
-<app-converter
-  fxLayout="row"
-  fxLayoutAlign="center center"
-  [unit]="'Currency'"
-  [units]="exchangeRates"
-  [fromUnit]="fromCurrency"
-  [toUnit]="toCurrency"
-  [fromAmount]="fromAmount"
-  [toAmount]="toAmount"
-  (fromAmountChange)="handleFromAmountChange($event)"
-  (fromUnitChange)="handleFromCurrencyChange($event)"
-  (toAmountChange)="handleToAmountChange($event)"
-  (toUnitChange)="handleToCurrencyChange($event)"
-></app-converter>
+<div fxLayout="row" fxLayoutAlign="center">
+  <mat-card appearance="outlined" fxLayout="column" fxFlex="80ch" fxFlex.xs="100%">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>
+          Currency Converter
+        </mat-card-title>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <app-converter
+        [units]="exchangeRates"
+        [fromUnit]="fromCurrency"
+        [toUnit]="toCurrency"
+        [fromAmount]="fromAmount"
+        [toAmount]="toAmount"
+        (fromAmountChange)="handleFromAmountChange($event)"
+        (fromUnitChange)="handleFromCurrencyChange($event)"
+        (toAmountChange)="handleToAmountChange($event)"
+        (toUnitChange)="handleToCurrencyChange($event)"
+      ></app-converter>
+    </mat-card-content>
+    <mat-card-footer class="text-right">
+      <a mat-button disableRipple="true" href="https://www.exchangerate-api.com" target="_blank">
+        Rates By Exchange Rate API <mat-icon>open_in_new</mat-icon>
+      </a>
+    </mat-card-footer>
+  </mat-card>
+</div>

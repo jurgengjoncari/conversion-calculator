@@ -10,6 +10,7 @@ import {MatTabLink, MatTabNav, MatTabNavPanel} from "@angular/material/tabs";
 import {MatButtonToggle, MatButtonToggleGroup} from "@angular/material/button-toggle";
 import {MatToolbar} from "@angular/material/toolbar";
 import {MatIcon} from "@angular/material/icon";
+import {MatAnchor} from "@angular/material/button";
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,8 @@ import {MatIcon} from "@angular/material/icon";
     MatButtonToggleGroup,
     MatButtonToggle,
     MatToolbar,
-    MatIcon
+    MatIcon,
+    MatAnchor
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
