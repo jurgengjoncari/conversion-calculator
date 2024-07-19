@@ -56,11 +56,11 @@ export class CurrencyConverterComponent implements OnInit {
   }
 
   calculateToAmount(): void {
-    this.toAmount = this.fromAmount * this.exchangeRates[this.toCurrency];
+    this.toAmount = Number((this.fromAmount * this.exchangeRates[this.toCurrency]).toFixed(3));
   }
 
   calculateFromAmount(): void {
-    this.fromAmount = this.toAmount / this.exchangeRates[this.toCurrency];
+    this.fromAmount = Number((this.toAmount / this.exchangeRates[this.toCurrency]).toFixed(3));
   }
 
   handleFromAmountChange(amount: number): void {

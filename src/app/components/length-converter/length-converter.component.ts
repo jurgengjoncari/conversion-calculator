@@ -56,6 +56,6 @@ export class LengthConverterComponent implements OnInit{
 
   handleToUnitChange(unit: string): void {
     this.toUnit = unit;
-    this.calculateFromAmount();
+    this.calculateToAmount();
   }
 }

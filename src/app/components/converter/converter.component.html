@@ -8,7 +8,7 @@
           type="number"
           placeholder="Amount"
           name="fromAmount"
-          [ngModel]="fromAmount | number:'1.0-3'"
+          [ngModel]="fromAmount"
           (ngModelChange)="onFromAmountChange($event)"
         >
         <mat-hint>Enter the amount</mat-hint>
@@ -32,7 +32,7 @@
           type="number"
           placeholder="Amount"
           name="toAmount"
-          [ngModel]="toAmount | number:'1.0-3'"
+          [ngModel]="toAmount"
           (ngModelChange)="onToAmountChange($event)"
         >
         <mat-hint>Enter the amount</mat-hint>
