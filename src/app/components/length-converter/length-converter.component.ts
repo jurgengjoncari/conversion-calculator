@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ConverterComponent} from "../converter/converter.component";
-import {lengths} from "../../../assets/catalog.json"
+import catalog from "../../../assets/catalog.json"
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatCard, MatCardContent, MatCardHeader, MatCardTitle, MatCardTitleGroup} from "@angular/material/card";
 
@@ -25,7 +25,7 @@ export class LengthConverterComponent implements OnInit{
   toUnit: string = 'in';
   fromAmount: number = 1;
   toAmount: number = 0;
-  lengths: {[key: string]: {[key: string]: number}} = lengths;
+  lengths: {[key: string]: {[key: string]: number}} = catalog.lengths;
 
   ngOnInit() {
     this.calculateToAmount();

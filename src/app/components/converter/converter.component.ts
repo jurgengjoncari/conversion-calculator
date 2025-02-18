@@ -6,17 +6,6 @@ import {CommonModule, DecimalPipe, KeyValuePipe} from "@angular/common";
 import {MatInput} from "@angular/material/input";
 import {MatOptionModule} from "@angular/material/core";
 import {FlexLayoutModule} from "@angular/flex-layout";
-import {MatDivider} from "@angular/material/divider";
-import {
-  MatCard,
-  MatCardContent,
-  MatCardFooter,
-  MatCardHeader, MatCardSubtitle,
-  MatCardTitle,
-  MatCardTitleGroup
-} from "@angular/material/card";
-import {MatAnchor} from "@angular/material/button";
-import {MatIcon} from "@angular/material/icon";
 
 @Component({
   selector: 'app-converter',
@@ -32,17 +21,7 @@ import {MatIcon} from "@angular/material/icon";
     MatOptionModule,
     MatSelectModule,
     CommonModule,
-    FlexLayoutModule,
-    MatDivider,
-    MatCard,
-    MatCardContent,
-    MatCardFooter,
-    MatCardHeader,
-    MatCardTitle,
-    MatAnchor,
-    MatIcon,
-    MatCardTitleGroup,
-    MatCardSubtitle
+    FlexLayoutModule
   ],
   templateUrl: './converter.component.html',
   styleUrl: './converter.component.scss'

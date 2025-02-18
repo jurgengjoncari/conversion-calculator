@@ -10,12 +10,9 @@ const {API_URL} = environment.currency;
   providedIn: 'root'
 })
 export class CurrencyConversionService {
-
-  private URL = API_URL;
-
   constructor(private http: HttpClient) { }
 
-  getExchangeRates(base: string): Observable<any> {
-    return this.http.get(`${this.URL}/${base}`);
+  getExchangeRates(baseCurrency: string): Observable<any> {
+    return this.http.get(`${API_URL}/${baseCurrency}`);
   }
 }
