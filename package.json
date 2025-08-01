@@ -1,11 +1,11 @@
 {
-  "name": "conversion-calculator",
+  "name": "converter",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration production --base-href=/conversion-calculator/",
-    "deploy": "ng deploy --base-href=/conversion-calculator/ --repo=https://github.com/jurgengjoncari/conversion-calculator.git",
+    "build": "ng build --configuration production --base-href=/converter/",
+    "deploy": "ng deploy --base-href=/converter/ --repo=https://github.com/jurgengjoncari/converter.git",
     "build-and-deploy": "npm run build && npm run deploy",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

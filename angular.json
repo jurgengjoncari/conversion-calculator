@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "conversion-calculator": {
+    "converter": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/conversion-calculator",
+            "outputPath": "dist/converter",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "conversion-calculator:build:production"
+              "buildTarget": "converter:build:production"
             },
             "development": {
-              "buildTarget": "conversion-calculator:build:development"
+              "buildTarget": "converter:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -105,11 +105,11 @@
         "cypress-run": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "conversion-calculator:serve"
+            "devServerTarget": "converter:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "conversion-calculator:serve:production"
+              "devServerTarget": "converter:serve:production"
             }
           }
         },
@@ -123,27 +123,27 @@
         "ct": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "conversion-calculator:serve",
+            "devServerTarget": "converter:serve",
             "watch": true,
             "headless": false,
             "testingType": "component"
           },
           "configurations": {
             "development": {
-              "devServerTarget": "conversion-calculator:serve:development"
+              "devServerTarget": "converter:serve:development"
             }
           }
         },
         "e2e": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "conversion-calculator:serve",
+            "devServerTarget": "converter:serve",
             "watch": true,
             "headless": false
           },
           "configurations": {
             "production": {
-              "devServerTarget": "conversion-calculator:serve:production"
+              "devServerTarget": "converter:serve:production"
             }
           }
         }

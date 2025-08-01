@@ -32,7 +32,7 @@ import {MatAnchor} from "@angular/material/button";
 })
 
 export class AppComponent {
-  title = 'conversion-calculator';
+  title = 'converter';
 
   constructor(public router: Router) {
   }

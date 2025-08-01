@@ -1,6 +1,6 @@
-# Conversion Calculator
+# Converter
 
-This project is an Angular-based, mobile-first Progressive Web Application (PWA) that provides a conversion calculator for currency and length units. The application is designed to be modular, maintainable, and scalable, utilizing Angular Material for styling and Angular Flex-Layout for responsive layouts.
+This project is an Angular-based, mobile-first Progressive Web Application (PWA) that provides a converter for currency and length units. The application is designed to be modular, maintainable, and scalable, utilizing Angular Material for styling and Angular Flex-Layout for responsive layouts.
 
 ## Table of Contents
 - [Features](#features)
