@@ -11,6 +11,7 @@ This project is an Angular-based, mobile-first Progressive Web Application (PWA)
 
 ## Features
 - Currency conversion supporting multiple currency pairs
+- Automatic detection of user's local currency
 - Length conversion supporting meters, yards, and inches
 - Two-way conversion for both currency and length
 - Responsive design using Angular Flex-Layout
@@ -19,7 +20,8 @@ This project is an Angular-based, mobile-first Progressive Web Application (PWA)
 ## Usage
 - Choose which unit you want to convert by selecting the tab.
 - Enter the amount you want to convert.
-- Select the source and target currencies for currency conversion.
+- The app will automatically detect your local currency and set appropriate default conversions:
+- Select different source and target currencies for currency conversion if needed.
 - Select the source and target units for length conversion.
 - View the conversion result instantly.
 
