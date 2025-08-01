@@ -1,4 +1,3 @@
-// src/app/components/currency-converter/currency-converter.component.ts
 import {Component, OnInit} from '@angular/core';
 import { CurrencyConversionService } from '../../services/currency-conversion.service';
 import {ConverterComponent} from "../converter/converter.component";
@@ -13,6 +12,7 @@ import {
 } from "@angular/material/card";
 import {MatAnchor} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
+import {GeolocationService} from "../../services/geolocation.service";
 
 @Component({
   selector: 'app-currency-converter',
@@ -40,10 +40,25 @@ export class CurrencyConverterComponent implements OnInit {
   exchangeRates: {[key: string]: number} = {'USD': 1};
   lastUpdated!: string;
 
-  constructor(private currencyService: CurrencyConversionService) { }
+  constructor(
+    private currencyService: CurrencyConversionService,
+    private geolocationService: GeolocationService
+  ) { }
 
   ngOnInit(): void {
+    this.getFromCurrencyByLocation();
     this.getExchangeRates(this.fromCurrency);
+  }
+
+  getFromCurrencyByLocation(): void {
+    this.geolocationService.getCurrencyByLocation().subscribe({
+      next: currency => {
+        this.fromCurrency = currency;
+        if (this.fromCurrency === 'EUR') {
+          this.toCurrency = 'USD';
+        }
+      }
+    })
   }
 
   getExchangeRates(currency: string): void {
