@@ -6,10 +6,11 @@
         <input
           matInput
           type="number"
+          min="0"
           placeholder="Amount"
           name="fromAmount"
           [ngModel]="fromAmount"
-          (ngModelChange)="onFromAmountChange($event)"
+          (ngModelChange)="onFromAmountChange($event || 0)"
         >
         <mat-hint>Enter the amount</mat-hint>
       </mat-form-field>
@@ -30,10 +31,11 @@
         <input
           matInput
           type="number"
+          min="0"
           placeholder="Amount"
           name="toAmount"
           [ngModel]="toAmount"
-          (ngModelChange)="onToAmountChange($event)"
+          (ngModelChange)="onToAmountChange($event || 0)"
         >
         <mat-hint>Enter the amount</mat-hint>
       </mat-form-field>
